@@ -1,0 +1,20 @@
+const express = require('express');
+const mongoose = require("mongoose");
+
+const app = express();
+
+// Conecta ao banco de dados
+mongoose.connect(
+    "mongodb+srv://Charles:1234@cluster0-dm1xg.mongodb.net/app?retryWrites=true",
+    {
+        useNewUrlParser: true,
+    });
+
+//middleware
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+
+//importa informação da variável routes, do arquivo routes.js
+app.use(require('./routes'));
+
+app.listen(3333);

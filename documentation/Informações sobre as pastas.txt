@@ -1,0 +1,6 @@
+Models = representação do banco de dados, só que em formato JavaScript, 
+        ou seja, toda tabela que eu tiver no banco de dados, eu terei 
+        ela em JavaScript também.
+
+Controllers = são onde estão as regras de negócio da sua aplicação. Ou seja
+        ele recebe as requisições da sua aplicação e trabalha nelas.

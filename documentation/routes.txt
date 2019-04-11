@@ -1,0 +1,23 @@
+const express = require('express');
+
+const routes = express.Router();
+
+// GET = buscar informação.
+// POST = criar alguma coisa.
+// PUT = editar.
+// DELETE = deletar.
+
+routes.get('/teste', (req, res) => {
+    
+    // req = representa a requisição feita para o nosso servidor. 
+    // Exemplo: enviar algo para o servidor como formulário. 
+    // Pega os dados que recebe.
+
+    // res = resposta que o cliente vai receber do servidor, 
+    //ou que a aplicação irá retornar.
+
+    return res.send('Hello World');
+})
+
+//exporta alguma informação do arquivo. 
+module.exports = routes; //Exportar informação da variável routes
