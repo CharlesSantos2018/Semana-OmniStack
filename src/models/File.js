@@ -18,7 +18,7 @@ const File = new mongoose.Schema(
     }
 );
 
-File.virtual('url').get(function () {
+File.virtual('url').get(function() {
     return `http://localhost:3333/files/${encodeURIComponent(this.path)}`;
 })
 
